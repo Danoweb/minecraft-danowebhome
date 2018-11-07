@@ -1,0 +1,125 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 8/28/18 11:22 PM
+Description: Ticking entity
+
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at java.util.BitSet.set(Unknown Source)
+	at java.util.BitSet.set(Unknown Source)
+	at ceg.a(SourceFile:70)
+	at ayb.a(SourceFile:168)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at xt$1.tryAdvance(SourceFile:32)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at ces.a(SourceFile:182)
+	at aer.a(SourceFile:643)
+	at afa.a(SourceFile:1697)
+	at afa.k(SourceFile:1998)
+	at afb.k(SourceFile:495)
+	at aeo.k(SourceFile:134)
+	at ajp.k(SourceFile:46)
+	at afa.R_(SourceFile:1819)
+	at afb.R_(SourceFile:279)
+	at axx.a(SourceFile:1243)
+	at td.a(SourceFile:575)
+	at axx.g(SourceFile:1218)
+	at axx.o_(SourceFile:1100)
+	at td.o_(SourceFile:491)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:755)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.util.BitSet.set(Unknown Source)
+	at java.util.BitSet.set(Unknown Source)
+	at ceg.a(SourceFile:70)
+	at ayb.a(SourceFile:168)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at xt$1.tryAdvance(SourceFile:32)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at ces.a(SourceFile:182)
+	at aer.a(SourceFile:643)
+	at afa.a(SourceFile:1697)
+	at afa.k(SourceFile:1998)
+	at afb.k(SourceFile:495)
+	at aeo.k(SourceFile:134)
+	at ajp.k(SourceFile:46)
+	at afa.R_(SourceFile:1819)
+	at afb.R_(SourceFile:279)
+	at axx.a(SourceFile:1243)
+	at td.a(SourceFile:575)
+	at axx.g(SourceFile:1218)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:cow (ajs)
+	Entity ID: 1766070
+	Entity Name: Cow
+	Entity's Exact location: -516.85, 63.00, -102.50
+	Entity's Block location: World: (-517,63,-103), Chunk: (at 11,3,9 in -33,-7; contains blocks -528,0,-112 to -513,255,-97), Region: (-2,-1; contains chunks -64,-32 to -33,-1, blocks -1024,0,-512 to -513,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at axx.o_(SourceFile:1100)
+	at td.o_(SourceFile:491)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 3 total; [tf['Danoweb'/1605091, l='world', x=-397.66, y=63.00, z=-39.70], tf['HueofPurple'/1726456, l='world', x=-369.05, y=80.00, z=-1077.19], tf['elitezulu15'/1680009, l='world', x=-808.75, y=62.07, z=751.00]]
+	Chunk stats: ServerChunkCache: 1453 Drop: 0
+	Level seed: -7307828344296914343
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (-240,72,-112), Chunk: (at 0,4,0 in -15,-7; contains blocks -240,0,-112 to -225,255,-97), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 55768447 game time, 59915904 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 56745 (now: false), thunder time: 128021 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:755)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.13.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 2538462208 bytes (2420 MB) / 4197449728 bytes (4003 MB) up to 4197449728 bytes (4003 MB)
+	JVM Flags: 2 total; -Xms4G -Xmx4G
+	Profiler Position: N/A (disabled)
+	Player Count: 3 / 20; [tf['Danoweb'/1605091, l='world', x=-397.66, y=63.00, z=-39.70], tf['elitezulu15'/1680009, l='world', x=-808.75, y=62.07, z=751.00], tf['HueofPurple'/1726456, l='world', x=-369.05, y=80.00, z=-1077.19]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

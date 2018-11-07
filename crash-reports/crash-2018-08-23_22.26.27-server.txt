@@ -1,0 +1,112 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 8/23/18 10:26 PM
+Description: Ticking entity
+
+java.lang.AbstractMethodError: cel.a()Z
+	at cev.b(SourceFile:56)
+	at cev.a(SourceFile:60)
+	at ayb.a(SourceFile:163)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at xt$1.tryAdvance(SourceFile:32)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at ces.a(SourceFile:182)
+	at aer.a(SourceFile:643)
+	at amk.R_(SourceFile:123)
+	at axx.a(SourceFile:1243)
+	at td.a(SourceFile:575)
+	at axx.g(SourceFile:1218)
+	at axx.o_(SourceFile:1100)
+	at td.o_(SourceFile:491)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:755)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at cev.b(SourceFile:56)
+	at cev.a(SourceFile:60)
+	at ayb.a(SourceFile:163)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at xt$1.tryAdvance(SourceFile:32)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at ces.a(SourceFile:182)
+	at aer.a(SourceFile:643)
+	at amk.R_(SourceFile:123)
+	at axx.a(SourceFile:1243)
+	at td.a(SourceFile:575)
+	at axx.g(SourceFile:1218)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:falling_block (amk)
+	Entity ID: 354
+	Entity Name: Falling Block
+	Entity's Exact location: -195.50, 37.50, -168.50
+	Entity's Block location: World: (-196,37,-169), Chunk: (at 12,2,7 in -13,-11; contains blocks -208,0,-176 to -193,255,-161), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: 0.00, -0.04, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+	Immitating BlockState: Block{minecraft:gravel}
+Stacktrace:
+	at axx.o_(SourceFile:1100)
+	at td.o_(SourceFile:491)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 3 total; [tf['Danoweb'/890122, l='world', x=-457.72, y=63.42, z=303.40], tf['elitezulu15'/953381, l='world', x=-366.83, y=47.00, z=-49.02], tf['HueofPurple'/961385, l='world', x=-453.49, y=64.00, z=313.64]]
+	Chunk stats: ServerChunkCache: 973 Drop: 0
+	Level seed: -7307828344296914343
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (-240,72,-112), Chunk: (at 0,4,0 in -15,-7; contains blocks -240,0,-112 to -225,255,-97), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 47068174 game time, 50861337 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 9575 (now: false), thunder time: 3176 (now: true)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:755)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.13.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1150318680 bytes (1097 MB) / 4258791424 bytes (4061 MB) up to 4258791424 bytes (4061 MB)
+	JVM Flags: 2 total; -Xms4G -Xmx4G
+	Profiler Position: N/A (disabled)
+	Player Count: 3 / 20; [tf['Danoweb'/890122, l='world', x=-457.72, y=63.42, z=303.40], tf['elitezulu15'/953381, l='world', x=-366.83, y=47.00, z=-49.02], tf['HueofPurple'/961385, l='world', x=-453.49, y=64.00, z=313.64]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

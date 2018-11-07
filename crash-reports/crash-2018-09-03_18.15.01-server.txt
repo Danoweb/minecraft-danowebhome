@@ -1,0 +1,127 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 9/3/18 6:15 PM
+Description: Ticking entity
+
+java.lang.IllegalArgumentException: Lengths of point arrays must be consistent with the size of the VoxelShape.
+	at cef.<init>(SourceFile:29)
+	at cev.a(SourceFile:67)
+	at ayb.a(SourceFile:163)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at xt$1.tryAdvance(SourceFile:32)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at ces.a(SourceFile:182)
+	at aer.a(SourceFile:643)
+	at afa.a(SourceFile:1697)
+	at afa.k(SourceFile:1998)
+	at afb.k(SourceFile:495)
+	at aeo.k(SourceFile:134)
+	at ajp.k(SourceFile:46)
+	at akl.k(SourceFile:205)
+	at afa.R_(SourceFile:1819)
+	at afb.R_(SourceFile:279)
+	at akl.R_(SourceFile:220)
+	at axx.a(SourceFile:1243)
+	at td.a(SourceFile:575)
+	at axx.g(SourceFile:1218)
+	at axx.o_(SourceFile:1100)
+	at td.o_(SourceFile:491)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:755)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at cef.<init>(SourceFile:29)
+	at cev.a(SourceFile:67)
+	at ayb.a(SourceFile:163)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(Unknown Source)
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at xt$1.tryAdvance(SourceFile:32)
+	at java.util.Spliterators$1Adapter.hasNext(Unknown Source)
+	at ces.a(SourceFile:182)
+	at aer.a(SourceFile:643)
+	at afa.a(SourceFile:1697)
+	at afa.k(SourceFile:1998)
+	at afb.k(SourceFile:495)
+	at aeo.k(SourceFile:134)
+	at ajp.k(SourceFile:46)
+	at akl.k(SourceFile:205)
+	at afa.R_(SourceFile:1819)
+	at afb.R_(SourceFile:279)
+	at akl.R_(SourceFile:220)
+	at axx.a(SourceFile:1243)
+	at td.a(SourceFile:575)
+	at axx.g(SourceFile:1218)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:wolf (akl)
+	Entity ID: 346
+	Entity Name: CHAMP
+	Entity's Exact location: -237.69, 71.00, -130.94
+	Entity's Block location: World: (-238,71,-131), Chunk: (at 2,4,13 in -15,-9; contains blocks -240,0,-144 to -225,255,-129), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at axx.o_(SourceFile:1100)
+	at td.o_(SourceFile:491)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 1 total; [tf['LukeTheBlock'/859477, l='world', x=-242.28, y=71.85, z=-178.73]]
+	Chunk stats: ServerChunkCache: 473 Drop: 0
+	Level seed: -7307828344296914343
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (-240,72,-112), Chunk: (at 0,4,0 in -15,-7; contains blocks -240,0,-112 to -225,255,-97), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 65502440 game time, 69986191 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 27641 (now: false), thunder time: 158015 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:755)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.13.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1505147496 bytes (1435 MB) / 4256694272 bytes (4059 MB) up to 4256694272 bytes (4059 MB)
+	JVM Flags: 2 total; -Xms4G -Xmx4G
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [tf['LukeTheBlock'/859477, l='world', x=-242.28, y=71.85, z=-178.73]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
